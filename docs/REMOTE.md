@@ -2,6 +2,12 @@
 
 This guide completes Remote Explorer options in VS Code.
 
+## Why the Menu Looks the Same
+Remote Explorer always shows the same base menu. It changes only when:
+- You add SSH hosts (they appear under "SSH Targets")
+- Docker is installed (Dev Containers can actually run)
+- You sign in (Codespaces and Tunnels show available items)
+
 ## 1) WSL
 WSL is installed. Use:
 - Command Palette: `Remote-WSL: New Window`
