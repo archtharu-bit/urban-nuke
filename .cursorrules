@@ -1,0 +1,82 @@
+# Cursor Rules for AI-Assisted Development
+
+## Code Standards
+- Use consistent naming conventions (camelCase for variables, PascalCase for classes)
+- Add type annotations/hints to all functions
+- Write JSDoc/docstrings for all public APIs
+- Keep functions under 50 lines when possible
+- Use meaningful variable names (avoid a, b, x)
+
+## Architecture
+- Follow existing project structure
+- Group related functionality together
+- Minimize external dependencies
+- Use composition over inheritance
+- Keep modules focused and testable
+
+## Testing
+- Write tests for all new functionality
+- Aim for >80% code coverage
+- Use existing test framework
+- Include edge case tests
+- Test both happy paths and error states
+
+## Version Control
+- Make atomic, logical commits
+- Use clear commit messages
+- Reference issue numbers if applicable
+- Don't commit local config or secrets
+- Run tests before committing
+
+## Documentation
+- Update README with API changes
+- Add comments for complex logic
+- Include usage examples
+- Document breaking changes
+- Keep docs in sync with code
+
+## Performance
+- Avoid unnecessary loops and conditionals
+- Cache computed values when appropriate
+- Use efficient data structures
+- Profile before optimizing
+- Document performance considerations
+
+## Security
+- Validate all inputs
+- Sanitize user data
+- Use secure APIs
+- Avoid hardcoding secrets
+- Keep dependencies updated
+
+## Error Handling
+- Use try-catch for recoverable errors
+- Log meaningful error messages
+- Provide user-friendly error messages
+- Document expected exceptions
+- Handle async errors properly
+
+## Common Patterns
+- Use async/await over .then()
+- Prefer const/let over var
+- Use arrow functions for callbacks
+- Use template literals for strings
+- Use destructuring when beneficial
+
+## Dependency Management
+- Review new dependencies before adding
+- Use exact versions in production
+- Keep dependencies up to date
+- Remove unused dependencies
+- Document dependency purpose
+
+## Accessibility & Usability
+- Ensure code is readable
+- Use clear variable naming
+- Avoid magic numbers
+- Add configuration options
+- Support both CLI and programmatic usage
+
+---
+
+These rules apply to all AI-assisted code generation and human review.

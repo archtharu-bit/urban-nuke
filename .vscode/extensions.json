@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "anthropic.claude-code",
+    "saoudrizwan.claude-dev",
+    "Continue.continue",
+    "Codeium.codeium",
+    "amazonwebservices.amazon-q-vscode",
+    "TabNine.tabnine-vscode",
+    "supermaven.supermaven",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.makefile-tools",
+    "ms-vscode-remote.remote-containers",
+    "eamodio.gitlens"
+  ]
+}
+
