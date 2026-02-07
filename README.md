@@ -26,6 +26,7 @@ Reports are written to `reports\`.
 - `docs/CLI.md` - CLI usage and report formats.
 - `docs/VSCODE.md` - VS Code update and scan guidance.
 - `docs/MYSQL.md` - MySQL performance tuning guide.
+- `docs/REMOTE.md` - Remote Explorer setup for WSL/SSH/Containers/Tunnels.
 - `scripts/urban-nuke.ps1` - Report generator and basic security checks.
 - `reports/` - Generated reports (ignored by git).
 
