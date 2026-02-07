@@ -20,7 +20,7 @@ function Safe-Get([string]$Label, [scriptblock]$Block) {
   try {
     return & $Block
   } catch {
-    return "[Unavailable] $Label: $($_.Exception.Message)"
+    return "[Unavailable] ${Label}: $($_.Exception.Message)"
   }
 }
 
