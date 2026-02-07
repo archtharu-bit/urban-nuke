@@ -3,5 +3,7 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.autofetchPeriod": 180,
-  "git.pruneOnFetch": true
+  "git.pruneOnFetch": true,
+  "extensions.autoUpdate": true,
+  "extensions.autoCheckUpdates": true
 }

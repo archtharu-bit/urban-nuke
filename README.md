@@ -24,6 +24,7 @@ Reports are written to `reports\`.
 - `docs/SECURITY.md` - Hardening guidance and threat model.
 - `docs/AI.md` - Safe AI usage policy and prompt template.
 - `docs/CLI.md` - CLI usage and report formats.
+- `docs/VSCODE.md` - VS Code update and scan guidance.
 - `scripts/urban-nuke.ps1` - Report generator and basic security checks.
 - `reports/` - Generated reports (ignored by git).
 
