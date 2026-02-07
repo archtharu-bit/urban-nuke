@@ -5,5 +5,8 @@
   "git.autofetchPeriod": 180,
   "git.pruneOnFetch": true,
   "extensions.autoUpdate": true,
-  "extensions.autoCheckUpdates": true
+  "extensions.autoCheckUpdates": true,
+  "files.eol": "\r\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true
 }

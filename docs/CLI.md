@@ -22,3 +22,11 @@ powershell -ExecutionPolicy Bypass -File scripts\urban-nuke.ps1 network
 
 ## Notes
 If a command requires admin permissions, the report will note missing sections instead of failing.
+
+## VS Code Tasks
+You can also run the reports via VS Code Tasks:
+- `Urban Nuke: Report`
+- `Urban Nuke: Security Report`
+- `Urban Nuke: Hardware Report`
+- `Urban Nuke: Network Report`
+- `VS Code: Scan Extensions`

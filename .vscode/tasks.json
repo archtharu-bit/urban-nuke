@@ -1,0 +1,69 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Urban Nuke: Report",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\urban-nuke.ps1",
+        "report"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Urban Nuke: Security Report",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\urban-nuke.ps1",
+        "security"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Urban Nuke: Hardware Report",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\urban-nuke.ps1",
+        "hardware"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Urban Nuke: Network Report",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\urban-nuke.ps1",
+        "network"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "VS Code: Scan Extensions",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\vscode-scan.ps1"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
