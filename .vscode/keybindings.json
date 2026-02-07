@@ -1,0 +1,8 @@
+[
+  {
+    "key": "ctrl+alt+o",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Urban Nuke: Report",
+    "when": "editorTextFocus"
+  }
+]

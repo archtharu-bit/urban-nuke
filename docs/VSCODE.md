@@ -15,3 +15,7 @@ powershell -ExecutionPolicy Bypass -File scripts\vscode-scan.ps1
 ## Notes
 - Keep extensions lean; disable unused ones to reduce attack surface.
 - Prefer official marketplace extensions.
+
+## Keybindings
+Workspace keybindings live in `.vscode/keybindings.json`.
+- `Ctrl+Alt+O` runs `Urban Nuke: Report`
