@@ -25,6 +25,7 @@ Reports are written to `reports\`.
 - `docs/AI.md` - Safe AI usage policy and prompt template.
 - `docs/CLI.md` - CLI usage and report formats.
 - `docs/VSCODE.md` - VS Code update and scan guidance.
+- `docs/MYSQL.md` - MySQL performance tuning guide.
 - `scripts/urban-nuke.ps1` - Report generator and basic security checks.
 - `reports/` - Generated reports (ignored by git).
 
