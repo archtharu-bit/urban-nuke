@@ -1,19 +1,7 @@
 {
-  "github.copilot.enable": {
-    "*": true
-  },
-  "github.copilot.editor.enableAutoCompletions": true,
-  "continue.telemetryEnabled": false,
-  "continue.enableTabAutocomplete": true,
-  "codeium.enableCodeLens": true,
-  "codeium.enableSearch": true,
-  "tabnine.experimentalAutoImports": true,
-  "amazonQ.telemetry": false,
-  "gitlens.codeLens.enabled": true,
-  "gitlens.currentLine.enabled": true,
-  "gitlens.hovers.enabled": true,
-  "gitlens.blame.highlight.enabled": true,
-  "gitlens.statusBar.enabled": true,
-  "gitlens.ai.experimental.provider": "openai",
-  "gitlens.ai.experimental.openai.model": "gpt-4-turbo"
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.autofetchPeriod": 180,
+  "git.pruneOnFetch": true
 }
