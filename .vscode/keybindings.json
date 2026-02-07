@@ -2,7 +2,7 @@
   {
     "key": "ctrl+alt+o",
     "command": "workbench.action.tasks.runTask",
-    "args": "Urban Nuke: Report",
+    "args": "Urban Nuke: Run All",
     "when": "editorTextFocus"
   }
 ]

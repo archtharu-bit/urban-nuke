@@ -1,21 +1,23 @@
 # Project Status
 
-Use this checklist to keep the project structured and verified.
+## Core
+- [x] Reports CLI (`scripts/urban-nuke.ps1`)
+- [x] VS Code scan (`scripts/vscode-scan.ps1`)
+- [x] Remote readiness scan (`scripts/remote-check.ps1`)
+- [x] MySQL tuning script (`scripts/mysql-tune.ps1`)
+- [x] Run-all automation (`scripts/run-all.ps1`)
 
-## Structure
-- `.devcontainer/` present
-- `docs/` present
-- `scripts/` present
-- `reports/` ignored in `.gitignore`
+## Configuration
+- [x] VS Code tasks and keybinding
+- [x] Dev container config
+- [ ] Docker Desktop installed (install was canceled)
+- [ ] SSH host entries added (config template created)
+- [ ] VS Code tunnel enabled
+- [ ] Codespaces verified
 
-## Remote Setup
-- WSL installed and reachable
-- Docker Desktop installed (for Dev Containers)
-- SSH hosts configured in `%USERPROFILE%\.ssh\config`
-- GitHub/Microsoft sign-in for Codespaces and Tunnels
-
-## Verification
-Run:
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts\health-check.ps1
-```
+## Validation
+- [x] Reports generated successfully
+- [ ] Docker + Dev Containers tested
+- [ ] Remote SSH connection tested
+- [ ] Tunnel created and verified
+- [ ] Codespace created and connected

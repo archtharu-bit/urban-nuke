@@ -64,6 +64,18 @@
         "scripts\\vscode-scan.ps1"
       ],
       "problemMatcher": []
+    },
+    {
+      "label": "Urban Nuke: Run All",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\run-all.ps1"
+      ],
+      "problemMatcher": []
     }
   ]
 }

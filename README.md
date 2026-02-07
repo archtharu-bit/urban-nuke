@@ -27,9 +27,11 @@ Reports are written to `reports\`.
 - `docs/VSCODE.md` - VS Code update and scan guidance.
 - `docs/MYSQL.md` - MySQL performance tuning guide.
 - `docs/REMOTE.md` - Remote Explorer setup for WSL/SSH/Containers/Tunnels.
+- `docs/INDEX.md` - Repo structure overview.
 - `docs/STATUS.md` - Project status checklist and verification.
 - `scripts/urban-nuke.ps1` - Report generator and basic security checks.
 - `reports/` - Generated reports (ignored by git).
+- `src/` - Reserved for future app code.
 
 ## Security Reality Check
 No system can be made perfectly safe. The goal here is to reduce attack surface, keep software patched, and detect issues early. The included guidance is defensive and reversible.

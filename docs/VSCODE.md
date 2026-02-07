@@ -18,4 +18,4 @@ powershell -ExecutionPolicy Bypass -File scripts\vscode-scan.ps1
 
 ## Keybindings
 Workspace keybindings live in `.vscode/keybindings.json`.
-- `Ctrl+Alt+O` runs `Urban Nuke: Report`
+- `Ctrl+Alt+O` runs `Urban Nuke: Run All`

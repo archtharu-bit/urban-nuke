@@ -30,3 +30,4 @@ You can also run the reports via VS Code Tasks:
 - `Urban Nuke: Hardware Report`
 - `Urban Nuke: Network Report`
 - `VS Code: Scan Extensions`
+- `Urban Nuke: Run All`
