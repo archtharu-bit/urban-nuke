@@ -82,3 +82,6 @@ No system can be made perfectly safe. The goal here is to reduce attack surface,
 
 ## License
 Private use unless you decide otherwise.
+
+## Session Summary
+See `docs/SESSION_SUMMARY.md` for a full log of updates, scans, and publishing steps.
