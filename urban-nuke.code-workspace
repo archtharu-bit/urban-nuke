@@ -1,0 +1,58 @@
+{
+  "folders": [
+    {
+      "name": "📁 Root",
+      "path": "."
+    },
+    {
+      "name": "📜 Scripts - Core",
+      "path": "scripts/core"
+    },
+    {
+      "name": "🔒 Scripts - Security",
+      "path": "scripts/security"
+    },
+    {
+      "name": "🔧 Scripts - Maintenance",
+      "path": "scripts/maintenance"
+    },
+    {
+      "name": "✅ Scripts - Checks",
+      "path": "scripts/checks"
+    },
+    {
+      "name": "⚡ Scripts - Optimization",
+      "path": "scripts/optimization"
+    },
+    {
+      "name": "📊 Scripts - Reports",
+      "path": "scripts/reports"
+    },
+    {
+      "name": "⚙️ Scripts - Setup",
+      "path": "scripts/setup"
+    },
+    {
+      "name": "📚 Documentation",
+      "path": "docs"
+    },
+    {
+      "name": "📈 Reports",
+      "path": "reports"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/.git": false,
+      "**/reports": false
+    },
+    "explorer.sortOrder": "type",
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+      "*.ps1": "${capture}.bat, ${capture}.vbs",
+      "README.md": "*.md",
+      "package.json": "package-lock.json, yarn.lock"
+    }
+  }
+}
