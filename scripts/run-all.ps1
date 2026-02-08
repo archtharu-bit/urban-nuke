@@ -45,6 +45,18 @@ Invoke-Step 'Urban Nuke: network' {
 Invoke-Step 'VS Code: scan' {
   & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "vscode-scan.ps1") -OutDir $OutDir
 }
+Invoke-Step 'Stability: AI/graphics readiness scan' {
+  & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "stability-scan.ps1") -OutDir $OutDir
+}
+Invoke-Step 'Windows Update: scan (pending + history)' {
+  & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "windows-update-scan.ps1") -OutDir $OutDir
+}
+Invoke-Step 'Defender: status (no scan)' {
+  & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "defender-scan.ps1") -OutDir $OutDir
+}
+Invoke-Step 'Cleanup: scan (no deletions)' {
+  & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "cleanup-scan.ps1") -OutDir $OutDir
+}
 Invoke-Step 'Remote: check' {
   & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "remote-check.ps1") -OutDir $OutDir
 }
@@ -65,6 +77,21 @@ Invoke-Step 'SSH: setup' {
 }
 Invoke-Step 'Security: baseline' {
   & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "security-baseline.ps1") -OutDir $OutDir
+}
+Invoke-Step 'Cleanup: scan' {
+  & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "cleanup-scan.ps1") -OutDir $OutDir
+}
+Invoke-Step 'Defender: scan (status)' {
+  & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "defender-scan.ps1") -OutDir $OutDir
+}
+Invoke-Step 'Duplicates: scan' {
+  & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "duplicate-scan.ps1") -OutDir $OutDir
+}
+Invoke-Step 'Stability: scan' {
+  & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "stability-scan.ps1") -OutDir $OutDir
+}
+Invoke-Step 'Windows Update: scan' {
+  & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "windows-update-scan.ps1") -OutDir $OutDir
 }
 
 Write-Host "All automation complete. Check reports folder."

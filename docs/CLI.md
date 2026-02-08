@@ -8,11 +8,26 @@ The CLI is a PowerShell script that produces system and security reports.
 - `hardware` - Hardware inventory report.
 - `network` - Network adapter and profile status.
 
+## Additional Scripts
+- `scripts/stability-scan.ps1` - AI/graphics readiness + stability signals (GPU driver evidence, recent system errors, disk free, etc.).
+- `scripts/windows-update-scan.ps1` - Pending Windows Updates + recent update history (scan only).
+- `scripts/defender-scan.ps1` - Defender status and optional scans (opt-in).
+- `scripts/cleanup-scan.ps1` - Temp/startup scan and optional cleanup (opt-in).
+- `scripts/duplicate-scan.ps1` - Duplicate file detection (hash-based; never deletes).
+
 ## Examples
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts\urban-nuke.ps1 report
 powershell -ExecutionPolicy Bypass -File scripts\urban-nuke.ps1 security
 powershell -ExecutionPolicy Bypass -File scripts\urban-nuke.ps1 hardware
+
+powershell -ExecutionPolicy Bypass -File scripts\\stability-scan.ps1
+powershell -ExecutionPolicy Bypass -File scripts\\windows-update-scan.ps1
+powershell -ExecutionPolicy Bypass -File scripts\\defender-scan.ps1
+powershell -ExecutionPolicy Bypass -File scripts\\defender-scan.ps1 -QuickScan
+powershell -ExecutionPolicy Bypass -File scripts\\cleanup-scan.ps1
+powershell -ExecutionPolicy Bypass -File scripts\\cleanup-scan.ps1 -CleanTemp -EmptyRecycleBin
+powershell -ExecutionPolicy Bypass -File scripts\\duplicate-scan.ps1 -Path "$env:USERPROFILE\\Downloads"
 powershell -ExecutionPolicy Bypass -File scripts\urban-nuke.ps1 network
 ```
 
@@ -36,3 +51,8 @@ You can also run the reports via VS Code Tasks:
 - `Local Tools: Check`
 - `SSH: Setup`
 - `Security: Baseline`
+- `Cleanup: Scan`
+- `Defender: Scan`
+- `Duplicates: Scan`
+- `Stability: Scan`
+- `Windows Update: Scan`

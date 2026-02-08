@@ -35,6 +35,16 @@ Reports are written to `reports\`.
 - `docs/REMOTE-STATUS.md` - Current remote setup status.
 - `docs/SSH.md` - SSH setup and local host configuration.
 - `docs/SECURITY-BASELINE.md` - Lightweight security baseline script.
+- `docs/CLEANUP.md` - Cleanup scan and safe temp options.
+- `docs/DEFENDER.md` - Defender scan options.
+- `docs/DUPLICATES.md` - Duplicate file scan usage.
+- `docs/STABILITY.md` - Stability and driver scan.
+- `docs/WINDOWS-UPDATE.md` - Windows Update scan.
+- `scripts/stability-scan.ps1` - Stability + AI/graphics readiness scan.
+- `scripts/windows-update-scan.ps1` - Windows Update pending/history scan.
+- `scripts/defender-scan.ps1` - Defender status and optional scans.
+- `scripts/cleanup-scan.ps1` - Cleanup scan (opt-in deletions).
+- `scripts/duplicate-scan.ps1` - Duplicate file scan (never deletes).
 - `scripts/urban-nuke.ps1` - Report generator and basic security checks.
 - `reports/` - Generated reports (ignored by git).
 - `src/` - Reserved for future app code.

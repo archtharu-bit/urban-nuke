@@ -136,6 +136,66 @@
         "scripts\\security-baseline.ps1"
       ],
       "problemMatcher": []
+    },
+    {
+      "label": "Cleanup: Scan",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\cleanup-scan.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Defender: Scan",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\defender-scan.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Duplicates: Scan",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\duplicate-scan.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Stability: Scan",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\stability-scan.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Windows Update: Scan",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\windows-update-scan.ps1"
+      ],
+      "problemMatcher": []
     }
   ]
 }

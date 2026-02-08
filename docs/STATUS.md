@@ -11,6 +11,11 @@
 - [x] Local tools check (`scripts/local-check.ps1`)
 - [x] SSH setup script (`scripts/ssh-setup.ps1`)
 - [x] Security baseline script (`scripts/security-baseline.ps1`)
+- [x] Cleanup scan (`scripts/cleanup-scan.ps1`)
+- [x] Defender scan (`scripts/defender-scan.ps1`)
+- [x] Duplicate scan (`scripts/duplicate-scan.ps1`)
+- [x] Stability scan (`scripts/stability-scan.ps1`)
+- [x] Windows Update scan (`scripts/windows-update-scan.ps1`)
 
 ## Configuration
 - [x] VS Code tasks and keybinding
