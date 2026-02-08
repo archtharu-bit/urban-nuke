@@ -1,63 +1,63 @@
 {
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "git.enableSmartCommit": true,
-  "git.autofetchPeriod": 180,
-  "git.pruneOnFetch": true,
-  "git.enabled": true,
-  "git.decorations.enabled": true,
-  "scm.defaultViewMode": "tree",
-  "scm.alwaysShowActions": true,
-  "scm.alwaysShowRepositories": true,
-  "extensions.autoUpdate": true,
-  "extensions.autoCheckUpdates": true,
-  "files.eol": "\r\n",
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "files.exclude": {
-    "**/node_modules": true,
-    "**/.git": false
-  },
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/reports": false
-  },
-  "files.watcherExclude": {
-    "**/node_modules/**": true
-  },
-  "explorer.sortOrder": "type",
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.patterns": {
-    "*.ps1": "${capture}.bat",
-    "README.md": "LICENSE, CHANGELOG.md, CONTRIBUTING.md"
-  },
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "github.copilot.enable": {
-    "*": true
-  },
-  "github.copilot.editor.enableAutoCompletions": true,
-  "continue.telemetryEnabled": false,
-  "continue.enableTabAutocomplete": true,
-  "codeium.enableCodeLens": false,
-  "codeium.enableSearch": true,
-  "tabnine.experimentalAutoImports": true,
-  "amazonQ.telemetry": false,
-  "gitlens.codeLens.enabled": false,
-  "gitlens.currentLine.enabled": true,
-  "gitlens.hovers.enabled": true,
-  "gitlens.blame.highlight.enabled": false,
-  "gitlens.statusBar.enabled": true,
-  "problems.showInStatusBar": true,
-  "workbench.statusBar.visible": true,
-  "workbench.tree.indent": 20,
-  "workbench.tree.renderIndentGuides": "always",
-  "editor.inlineSuggest.enabled": true,
-  "editor.quickSuggestions": {
-    "other": true,
-    "comments": false,
-    "strings": true
-  },
-  "extensions.ignoreRecommendations": false,
-  "window.commandCenter": true
+    "git.autofetch":  true,
+    "git.confirmSync":  false,
+    "git.enableSmartCommit":  true,
+    "git.autofetchPeriod":  180,
+    "git.pruneOnFetch":  true,
+    "git.enabled":  true,
+    "git.decorations.enabled":  true,
+    "scm.defaultViewMode":  "tree",
+    "scm.alwaysShowActions":  true,
+    "scm.alwaysShowRepositories":  true,
+    "extensions.autoUpdate":  true,
+    "extensions.autoCheckUpdates":  true,
+    "files.eol":  "\r\n",
+    "files.insertFinalNewline":  true,
+    "files.trimTrailingWhitespace":  true,
+    "files.exclude":  {
+                          "**/node_modules":  true,
+                          "**/.git":  false
+                      },
+    "search.exclude":  {
+                           "**/node_modules":  true,
+                           "**/reports":  false
+                       },
+    "files.watcherExclude":  {
+                                 "**/node_modules/**":  true
+                             },
+    "explorer.sortOrder":  "type",
+    "explorer.fileNesting.enabled":  true,
+    "explorer.fileNesting.patterns":  {
+                                          "*.ps1":  "${capture}.bat",
+                                          "README.md":  "LICENSE, CHANGELOG.md, CONTRIBUTING.md"
+                                      },
+    "explorer.confirmDelete":  false,
+    "explorer.confirmDragAndDrop":  false,
+    "github.copilot.enable":  {
+                                  "*":  true
+                              },
+    "github.copilot.editor.enableAutoCompletions":  true,
+    "continue.telemetryEnabled":  false,
+    "continue.enableTabAutocomplete":  true,
+    "codeium.enableCodeLens":  false,
+    "codeium.enableSearch":  true,
+    "tabnine.experimentalAutoImports":  true,
+    "amazonQ.telemetry":  false,
+    "gitlens.codeLens.enabled":  false,
+    "gitlens.currentLine.enabled":  true,
+    "gitlens.hovers.enabled":  true,
+    "gitlens.blame.highlight.enabled":  false,
+    "gitlens.statusBar.enabled":  true,
+    "problems.showInStatusBar":  true,
+    "workbench.statusBar.visible":  true,
+    "workbench.tree.indent":  20,
+    "workbench.tree.renderIndentGuides":  "always",
+    "editor.inlineSuggest.enabled":  true,
+    "editor.quickSuggestions":  {
+                                    "other":  true,
+                                    "comments":  false,
+                                    "strings":  true
+                                },
+    "extensions.ignoreRecommendations":  false,
+    "window.commandCenter":  true
 }
