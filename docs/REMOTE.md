@@ -30,6 +30,10 @@ Requires Docker Desktop. Install:
 ```
 winget install -e --id Docker.DockerDesktop
 ```
+After install, ensure the Docker Desktop service is running (requires admin):
+```
+Start-Service com.docker.service
+```
 After install, open VS Code and run:
 - `Dev Containers: Add Dev Container Configuration Files`
 - `Dev Containers: Reopen in Container`

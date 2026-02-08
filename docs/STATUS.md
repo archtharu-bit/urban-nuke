@@ -13,14 +13,15 @@
 ## Configuration
 - [x] VS Code tasks and keybinding
 - [x] Dev container config
-- [ ] Docker Desktop installed (install canceled by UAC)
+- [x] Docker Desktop installed
+- [ ] Docker Desktop service running (requires admin start)
 - [ ] SSH host entries added (config template created)
 - [ ] VS Code tunnel enabled
 - [ ] Codespaces verified
 
 ## Validation
 - [x] Reports generated successfully
-- [ ] Docker + Dev Containers tested
+- [ ] Docker + Dev Containers tested (Docker daemon not running)
 - [ ] Remote SSH connection tested
 - [ ] Tunnel created and verified
 - [ ] Codespace created and connected
