@@ -7,14 +7,14 @@ param(
 
   # Limit the scan to reduce runtime. Default: 10 GB.
   [Parameter()]
-  [int]$MaxTotalBytesToHash = 10737418240,
+[long]$MaxTotalBytesToHash = 10737418240,
 
   # Optional file patterns; if omitted, all files are considered.
   [Parameter()]
   [string[]]$Include = @(),
 
   [Parameter()]
-  [int]$MinFileSizeBytes = 1048576
+[int]$MinFileSizeBytes = 1048576
 )
 
 Set-StrictMode -Version Latest
