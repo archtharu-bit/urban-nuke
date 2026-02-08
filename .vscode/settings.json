@@ -9,7 +9,6 @@
   "files.eol": "\r\n",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-
   "files.exclude": {
     "**/reports": true
   },
@@ -18,5 +17,22 @@
   },
   "files.watcherExclude": {
     "**/reports/**": true
-  }
+  },
+  "github.copilot.enable": {
+    "*": true
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "continue.telemetryEnabled": false,
+  "continue.enableTabAutocomplete": true,
+  "codeium.enableCodeLens": true,
+  "codeium.enableSearch": true,
+  "tabnine.experimentalAutoImports": true,
+  "amazonQ.telemetry": false,
+  "gitlens.codeLens.enabled": true,
+  "gitlens.currentLine.enabled": true,
+  "gitlens.hovers.enabled": true,
+  "gitlens.blame.highlight.enabled": true,
+  "gitlens.statusBar.enabled": true,
+  "problems.showInStatusBar": true,
+  "workbench.statusBar.visible": true
 }

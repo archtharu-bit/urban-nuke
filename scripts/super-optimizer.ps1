@@ -14,9 +14,9 @@ Write-Host "Mode: $(if($Apply){'APPLY'}else{'DRY-RUN'})" -ForegroundColor Yellow
 if (-not $SkipApps) {
   Write-Host "`n[1/8] Updating Windows & Store Apps..." -ForegroundColor Green
   if ($Apply) {
-    Install-Module PSWindowsUpdate -Force -SkipPublisherCheck -ErrorAction SilentlyContinue
+    Install-Module PSWindowsUpdate -Force -SkipPublisherCheck -Scope CurrentUser -ErrorAction SilentlyContinue
     Get-WindowsUpdate -AcceptAll -Install -IgnoreReboot -ErrorAction SilentlyContinue
-    winget upgrade --all --accept-source-agreements --accept-package-agreements
+    winget upgrade --all --accept-source-agreements --accept-package-agreements --silent
   } else {
     winget upgrade --all
   }

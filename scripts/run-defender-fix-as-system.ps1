@@ -25,19 +25,19 @@ $taskCommand = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File `"$fixSc
 $startTime = (Get-Date).AddMinutes(1).ToString('HH:mm')
 
 Write-Host "Creating SYSTEM scheduled task: $TaskName"
-cmd.exe /c "schtasks /Create /F /TN \"$TaskName\" /SC ONCE /ST $startTime /RU SYSTEM /RL HIGHEST /TR \"$taskCommand\"" | Out-Null
+cmd.exe /c "schtasks /Create /F /TN `"$TaskName`" /SC ONCE /ST $startTime /RU SYSTEM /RL HIGHEST /TR `"$taskCommand`"" | Out-Null
 
 try {
   Write-Host "Running task..."
-  cmd.exe /c "schtasks /Run /TN \"$TaskName\"" | Out-Null
+  cmd.exe /c "schtasks /Run /TN `"$TaskName`"" | Out-Null
   Start-Sleep -Seconds $WaitSeconds
 
   Write-Host "Task status:"
-  $q = cmd.exe /c "schtasks /Query /TN \"$TaskName\" /V /FO LIST" 2>&1
+  $q = cmd.exe /c "schtasks /Query /TN `"$TaskName`" /V /FO LIST" 2>&1
   $q | Select-String -Pattern 'Status|Last Run Time|Last Result' | ForEach-Object { $_.Line }
 
   if (Test-Path -LiteralPath $logPath) {
-    Write-Host "\n=== Log (tail) ==="
+    Write-Host "`n=== Log (tail) ==="
     Get-Content -LiteralPath $logPath -Tail 120
   } else {
     Write-Host "LOG_NOT_CREATED"
@@ -45,7 +45,7 @@ try {
 } finally {
   # Cleanup task to avoid leaving scheduled tasks behind.
   try {
-    cmd.exe /c "schtasks /Delete /F /TN \"$TaskName\"" | Out-Null
+    cmd.exe /c "schtasks /Delete /F /TN `"$TaskName`"" | Out-Null
   } catch {
     # Not fatal
   }
