@@ -39,17 +39,25 @@
   "github.copilot.editor.enableAutoCompletions": true,
   "continue.telemetryEnabled": false,
   "continue.enableTabAutocomplete": true,
-  "codeium.enableCodeLens": true,
+  "codeium.enableCodeLens": false,
   "codeium.enableSearch": true,
   "tabnine.experimentalAutoImports": true,
   "amazonQ.telemetry": false,
-  "gitlens.codeLens.enabled": true,
+  "gitlens.codeLens.enabled": false,
   "gitlens.currentLine.enabled": true,
   "gitlens.hovers.enabled": true,
-  "gitlens.blame.highlight.enabled": true,
+  "gitlens.blame.highlight.enabled": false,
   "gitlens.statusBar.enabled": true,
   "problems.showInStatusBar": true,
   "workbench.statusBar.visible": true,
   "workbench.tree.indent": 20,
-  "workbench.tree.renderIndentGuides": "always"
+  "workbench.tree.renderIndentGuides": "always",
+  "editor.inlineSuggest.enabled": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "extensions.ignoreRecommendations": false,
+  "window.commandCenter": true
 }
