@@ -28,6 +28,9 @@ Reports are written to `reports\`.
 - `docs/MYSQL.md` - MySQL performance tuning guide.
 - `docs/REMOTE.md` - Remote Explorer setup for WSL/SSH/Containers/Tunnels.
 - `docs/INDEX.md` - Repo structure overview.
+- `docs/AWS.md` - AWS CLI setup and verification.
+- `docs/REDHAT.md` - Red Hat Java extension setup.
+- `docs/LOCAL.md` - Local tooling checks.
 - `docs/STATUS.md` - Project status checklist and verification.
 - `scripts/urban-nuke.ps1` - Report generator and basic security checks.
 - `reports/` - Generated reports (ignored by git).

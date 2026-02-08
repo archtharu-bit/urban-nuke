@@ -23,5 +23,8 @@ $scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "vscode-scan.ps1")
 & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "remote-check.ps1")
 & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "mysql-tune.ps1")
+& powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "aws-cli-check.ps1")
+& powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "redhat-check.ps1")
+& powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "local-check.ps1")
 
 Write-Host "All automation complete. Check reports folder."

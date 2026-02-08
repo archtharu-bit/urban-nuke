@@ -76,6 +76,42 @@
         "scripts\\run-all.ps1"
       ],
       "problemMatcher": []
+    },
+    {
+      "label": "AWS CLI: Check",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\aws-cli-check.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Red Hat Java: Check",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\redhat-check.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Local Tools: Check",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\local-check.ps1"
+      ],
+      "problemMatcher": []
     }
   ]
 }
