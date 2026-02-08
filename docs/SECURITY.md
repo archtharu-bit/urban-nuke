@@ -23,11 +23,34 @@ Goal: reduce the chance of compromise and limit impact if something goes wrong. 
 - Enable SmartScreen and reputation-based protection.
 - Use application allow-listing where practical.
 - Restrict RDP if not needed, or lock to trusted networks only.
+- Disable SMBv1.
+- Disable Remote Assistance if unused.
+- Turn on Controlled Folder Access (Defender) if compatible.
+- Enable Attack Surface Reduction (ASR) rules where possible.
 
 ## Network Hygiene
 - Use a trusted DNS provider.
 - Avoid unknown public Wi-Fi without a VPN.
 - Turn off file/printer sharing on public networks.
+- Disable IPv6 only if you understand the impact; otherwise leave it on.
+
+## Identity and Access
+- Prefer passkeys or MFA for all major accounts.
+- Use a separate local admin account for installs only.
+- Lock the screen automatically and require a password on wake.
+
+## Browser and Email
+- Keep one hardened browser for banking and admin portals.
+- Block third‑party cookies and disable unnecessary permissions.
+- Use DNS-over-HTTPS in the browser if supported.
+
+## Device and USB
+- Disable AutoPlay for all media.
+- Use “Ask every time” for USB device access if available.
+
+## Monitoring
+- Review Defender protection history weekly.
+- Check installed apps and startup items monthly.
 
 ## Backup and Recovery
 - Keep 3-2-1 backups.
@@ -44,6 +67,7 @@ Goal: reduce the chance of compromise and limit impact if something goes wrong. 
 - Reduce public posting of device details and software stack.
 - Avoid running unknown binaries.
 - Use separate browser profiles for sensitive tasks.
+- Avoid sharing full logs publicly; redact usernames and paths.
 
 ## Notes
 - Applied changes:
