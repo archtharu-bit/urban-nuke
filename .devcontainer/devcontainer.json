@@ -1,31 +1,45 @@
 {
-  "name": "Urban Nuke Dev",
+  "name": "Urban Nuke Dev Container",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  
   "features": {
-    "ghcr.io/devcontainers/features/git:1": {}
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/aws-cli:1": {}
   },
+  
   "customizations": {
     "vscode": {
+      "extensions": [
+        "github.copilot",
+        "github.copilot-chat",
+        "continue.continue",
+        "ms-python.python",
+        "ms-vscode.powershell",
+        "eamodio.gitlens"
+      ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash",
-        "github.copilot.chat.codeGeneration.instructions": [
-          "Repo is a Windows PowerShell toolkit for audits and system reports.",
-          "Main scripts live in scripts/; docs in docs/.",
-          "Generated output lives in reports/ and must not be edited.",
-          "Follow existing style and structure.",
-          "Prefer small, reviewable changes.",
-          "Add brief comments only where logic is non-obvious.",
-          "Do not add new dependencies without asking.",
-          "Do not include secrets or system-identifying data.",
-          "Never modify .env or reports/.",
-          "Avoid destructive commands unless explicitly requested."
-        ]
-      },
-      "extensions": [
-        "ms-azuretools.vscode-docker",
-        "ms-vscode-remote.remote-containers"
-      ]
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "editor.formatOnSave": true
+      }
     }
   },
+  
+  "postCreateCommand": "pip install openai anthropic langchain && npm install -g npm@latest",
+  
+  "forwardPorts": [3000, 8000, 8080],
+  
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,readonly,type=bind",
+    "source=${localWorkspaceFolder}/.env,target=/workspace/.env,type=bind"
+  ],
+  
   "remoteUser": "vscode"
 }
