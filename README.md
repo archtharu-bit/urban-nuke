@@ -23,6 +23,7 @@ Reports are written to `reports\`.
 - `docs/OPTIMIZATION.md` - Performance tuning checklist and decisions.
 - `docs/SECURITY.md` - Hardening guidance and threat model.
 - `docs/AI.md` - Safe AI usage policy and prompt template.
+- `docs/CLINE.md` - Cline (autonomous agent) setup and safe defaults.
 - `docs/CLI.md` - CLI usage and report formats.
 - `docs/VSCODE.md` - VS Code update and scan guidance.
 - `docs/MYSQL.md` - MySQL performance tuning guide.

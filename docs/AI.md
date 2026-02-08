@@ -19,3 +19,7 @@ Use AI to assist with diagnostics, documentation, and planning. Do not paste sec
 - Never upload full vulnerability scans to public tools.
 - Do not paste password manager exports or browser data.
 - Review AI-suggested commands before running.
+
+## Repo Agent Notes
+- This repo includes a `.clineignore` to prevent agents from touching `reports/`, `.env`, and tool state.
+- See `docs/CLINE.md` for safe defaults when using the Cline extension.

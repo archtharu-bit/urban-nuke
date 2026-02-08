@@ -1,0 +1,32 @@
+# Generated artifacts / outputs
+reports/
+
+# Secrets
+.env
+
+# VCS / IDE / tool state
+.git/
+.vscode/
+.devcontainer/
+
+# Common dependency / cache folders (in case they appear later)
+**/node_modules/
+**/.venv/
+**/venv/
+**/__pycache__/
+
+# Archives / large binaries
+**/*.zip
+**/*.7z
+**/*.rar
+**/*.exe
+**/*.msi
+**/*.iso
+**/*.bin
+**/*.dmp
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.mp4
+**/*.mov
+**/*.pdf

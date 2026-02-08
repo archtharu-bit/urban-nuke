@@ -8,5 +8,15 @@
   "extensions.autoCheckUpdates": true,
   "files.eol": "\r\n",
   "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+
+  "files.exclude": {
+    "**/reports": true
+  },
+  "search.exclude": {
+    "**/reports": true
+  },
+  "files.watcherExclude": {
+    "**/reports/**": true
+  }
 }
