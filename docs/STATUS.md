@@ -9,20 +9,23 @@
 - [x] AWS CLI check (`scripts/aws-cli-check.ps1`)
 - [x] Red Hat Java check (`scripts/redhat-check.ps1`)
 - [x] Local tools check (`scripts/local-check.ps1`)
+- [x] SSH setup script (`scripts/ssh-setup.ps1`)
+- [x] Security baseline script (`scripts/security-baseline.ps1`)
 
 ## Configuration
 - [x] VS Code tasks and keybinding
 - [x] Dev container config
 - [x] Docker Desktop installed
 - [x] Docker daemon running
-- [ ] SSH host entries added (config template only)
+- [x] SSH keys configured (local host entry)
+- [ ] OpenSSH Server installed (requires admin)
 - [ ] VS Code tunnel enabled
 - [ ] Codespaces verified
 
 ## Validation
 - [x] Reports generated successfully
 - [x] Docker + Dev Containers tested (daemon available)
-- [ ] Remote SSH connection tested
+- [ ] Remote SSH connection tested (sshd not installed)
 - [ ] Tunnel created and verified
 - [ ] Codespace created and connected
 - [ ] AWS Toolkit login verified

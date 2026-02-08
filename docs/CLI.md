@@ -34,3 +34,5 @@ You can also run the reports via VS Code Tasks:
 - `AWS CLI: Check`
 - `Red Hat Java: Check`
 - `Local Tools: Check`
+- `SSH: Setup`
+- `Security: Baseline`

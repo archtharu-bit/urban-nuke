@@ -112,6 +112,30 @@
         "scripts\\local-check.ps1"
       ],
       "problemMatcher": []
+    },
+    {
+      "label": "SSH: Setup",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\ssh-setup.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Security: Baseline",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts\\security-baseline.ps1"
+      ],
+      "problemMatcher": []
     }
   ]
 }

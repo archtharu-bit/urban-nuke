@@ -60,5 +60,11 @@ Invoke-Step 'Red Hat Java: check' {
 Invoke-Step 'Local Tools: check' {
   & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "local-check.ps1") -OutDir $OutDir
 }
+Invoke-Step 'SSH: setup' {
+  & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "ssh-setup.ps1") -OutDir $OutDir
+}
+Invoke-Step 'Security: baseline' {
+  & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "security-baseline.ps1") -OutDir $OutDir
+}
 
 Write-Host "All automation complete. Check reports folder."
