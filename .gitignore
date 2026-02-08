@@ -1,3 +1,6 @@
 # Generated reports
 reports/
 .env
+*.log
+defender-fix-admin.log
+defender-fix-system.log
