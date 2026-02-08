@@ -1,6 +1,19 @@
 param(
   [Parameter()]
-  [string]$OutDir = "reports"
+  [string]$OutDir = "reports",
+
+  # Default: generate ONE combined collection report (prevents report spam/duplicates).
+  [Parameter()]
+  [ValidateSet('collection','individual')]
+  [string]$Mode = 'collection',
+
+  # If -Mode collection, keep the intermediate per-step reports (stored temporarily).
+  [Parameter()]
+  [switch]$KeepIndividualReports,
+
+  # Opt-in: allow scripts that can change system configuration (SSH setup, security baseline).
+  [Parameter()]
+  [switch]$IncludeApplyActions
 )
 
 Set-StrictMode -Version Latest
@@ -15,6 +28,14 @@ function Ensure-Dir([string]$Path) {
 Ensure-Dir $OutDir
 
 $scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
+
+if ($Mode -eq 'collection') {
+  Write-Host "==> Run All (collection mode)"
+  # Call directly to avoid external argument conversion quirks for switch parameters.
+  & (Join-Path $scriptRoot "report-collection.ps1") -OutDir $OutDir -KeepIndividualReports:$KeepIndividualReports
+  Write-Host "All automation complete. Check reports folder."
+  exit 0
+}
 
 function Invoke-Step([string]$Name, [scriptblock]$Block) {
   Write-Host ("==> {0}" -f $Name)
@@ -72,11 +93,15 @@ Invoke-Step 'Red Hat Java: check' {
 Invoke-Step 'Local Tools: check' {
   & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "local-check.ps1") -OutDir $OutDir
 }
-Invoke-Step 'SSH: setup' {
-  & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "ssh-setup.ps1") -OutDir $OutDir
-}
-Invoke-Step 'Security: baseline' {
-  & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "security-baseline.ps1") -OutDir $OutDir
+if ($IncludeApplyActions) {
+  Invoke-Step 'SSH: setup (APPLY ACTION)' {
+    & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "ssh-setup.ps1") -OutDir $OutDir
+  }
+  Invoke-Step 'Security: baseline (APPLY ACTION)' {
+    & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "security-baseline.ps1") -OutDir $OutDir
+  }
+} else {
+  Write-Host "==> Skipping apply actions (SSH setup, security baseline). Use -IncludeApplyActions to enable."
 }
 Invoke-Step 'Duplicates: scan' {
   & powershell -ExecutionPolicy Bypass -File (Join-Path $scriptRoot "duplicate-scan.ps1") -OutDir $OutDir

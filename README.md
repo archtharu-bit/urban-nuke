@@ -18,7 +18,28 @@ powershell -ExecutionPolicy Bypass -File scripts\urban-nuke.ps1 security
 ```
 Reports are written to `reports\`.
 
+## One-file report (recommended)
+Generate a single combined report file (overwrites each run):
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\\run-all.ps1
+# output: reports\\latest-collection.md
+```
+
+Generate a short actionable summary from the combined report:
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\\analyze-collection.ps1 -WriteSummaryFile
+# output: reports\\latest-summary.md
+```
+
+Reduce old duplicate reports you already generated (safe dry-run by default):
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\\reports-prune.ps1 -KeepPerPrefix 2
+# then actually delete:
+powershell -ExecutionPolicy Bypass -File scripts\\reports-prune.ps1 -KeepPerPrefix 2 -Apply
+```
+
 ## Repo Layout
+- `AGENTS.md` - VS Code AI customization (instructions, prompts, agents, skills).
 - `docs/UPGRADES.md` - Track hardware and major software upgrades.
 - `docs/OPTIMIZATION.md` - Performance tuning checklist and decisions.
 - `docs/SECURITY.md` - Hardening guidance and threat model.
@@ -35,6 +56,7 @@ Reports are written to `reports\`.
 - `docs/STATUS.md` - Project status checklist and verification.
 - `docs/REMOTE-STATUS.md` - Current remote setup status.
 - `docs/SSH.md` - SSH setup and local host configuration.
+- `docs/CURSOR.md` - Cursor install and configuration.
 - `docs/SECURITY-BASELINE.md` - Lightweight security baseline script.
 - `docs/CLEANUP.md` - Cleanup scan and safe temp options.
 - `docs/DEFENDER.md` - Defender scan options.

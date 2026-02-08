@@ -1,0 +1,11 @@
+---
+description: Project rules for this repo
+globs:
+  - "**/*"
+---
+
+- Follow existing patterns and file layout.
+- Keep changes small and reversible.
+- Avoid touching `reports/` and `.env`.
+- Prefer PowerShell scripts and Windows-friendly paths.
+- Document user-visible behavior changes in `README.md`.

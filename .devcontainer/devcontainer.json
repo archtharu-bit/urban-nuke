@@ -7,7 +7,19 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash"
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "github.copilot.chat.codeGeneration.instructions": [
+          "Repo is a Windows PowerShell toolkit for audits and system reports.",
+          "Main scripts live in scripts/; docs in docs/.",
+          "Generated output lives in reports/ and must not be edited.",
+          "Follow existing style and structure.",
+          "Prefer small, reviewable changes.",
+          "Add brief comments only where logic is non-obvious.",
+          "Do not add new dependencies without asking.",
+          "Do not include secrets or system-identifying data.",
+          "Never modify .env or reports/.",
+          "Avoid destructive commands unless explicitly requested."
+        ]
       },
       "extensions": [
         "ms-azuretools.vscode-docker",

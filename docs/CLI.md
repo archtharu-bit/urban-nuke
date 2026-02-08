@@ -17,6 +17,9 @@ The CLI is a PowerShell script that produces system and security reports.
 
 ## Examples
 ```powershell
+powershell -ExecutionPolicy Bypass -File scripts\\run-all.ps1
+# output: reports\\latest-collection.md (one file)
+
 powershell -ExecutionPolicy Bypass -File scripts\urban-nuke.ps1 report
 powershell -ExecutionPolicy Bypass -File scripts\urban-nuke.ps1 security
 powershell -ExecutionPolicy Bypass -File scripts\urban-nuke.ps1 hardware
@@ -29,6 +32,12 @@ powershell -ExecutionPolicy Bypass -File scripts\\cleanup-scan.ps1
 powershell -ExecutionPolicy Bypass -File scripts\\cleanup-scan.ps1 -CleanTemp -EmptyRecycleBin
 powershell -ExecutionPolicy Bypass -File scripts\\duplicate-scan.ps1 -Path "$env:USERPROFILE\\Downloads"
 powershell -ExecutionPolicy Bypass -File scripts\urban-nuke.ps1 network
+
+powershell -ExecutionPolicy Bypass -File scripts\\reports-prune.ps1 -KeepPerPrefix 3
+powershell -ExecutionPolicy Bypass -File scripts\\reports-prune.ps1 -KeepPerPrefix 3 -Apply
+
+powershell -ExecutionPolicy Bypass -File scripts\\analyze-collection.ps1 -WriteSummaryFile
+powershell -ExecutionPolicy Bypass -File scripts\\self-test.ps1
 ```
 
 ## Output

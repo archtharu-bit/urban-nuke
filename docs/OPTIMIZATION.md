@@ -30,5 +30,15 @@ These items focus on performance and stability. Apply gradually and re-check wit
 
 ## Notes
 - Changes applied:
+- 2026-02-08: Baseline report created (`reports/report-20260208-101747.md`).
+- 2026-02-08: Windows Update scan report created (`reports/windows-update-scan-20260208-101815.md`).
+- 2026-02-08: Stability scan report created (`reports/stability-scan-20260208-101901.md`).
+- 2026-02-08: Verified TRIM enabled (NTFS/ReFS DisableDeleteNotify = 0).
+- 2026-02-08: Verified active power plan: Ultimate Performance.
+- 2026-02-08: Verified SSD health: Healthy/OK.
+- 2026-02-08: Startup apps inventoried (see latest self-test report).
 - Measured improvements:
+- Pending (no tuning changes applied yet).
 - Rollback plan:
+- Re-enable any disabled startup apps in Task Manager > Startup Apps.
+- Revert power plan using `powercfg /setactive <GUID>`.
