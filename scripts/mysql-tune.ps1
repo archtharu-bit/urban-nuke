@@ -2,7 +2,11 @@ param(
   [Parameter()]
   [string]$MyIniPath = "C:\ProgramData\MySQL\MySQL Server 8.0\my.ini",
   [Parameter()]
-  [string]$OutDir = "reports"
+  [string]$OutDir = "reports",
+
+  # Apply changes to my.ini (requires admin). If not set, script only writes a proposed tuned file.
+  [Parameter()]
+  [switch]$Apply
 )
 
 Set-StrictMode -Version Latest
@@ -62,17 +66,23 @@ Add-Content -Path $reportPath -Value "- innodb_redo_log_capacity: 100M -> 512M"
 Add-Content -Path $reportPath -Value "- max_heap_table_size: set to 72M"
 
 if (Test-Admin) {
-  Copy-Item -Path $MyIniPath -Destination ("{0}.bak-{1}" -f $MyIniPath, (Get-Date -Format 'yyyyMMdd-HHmmss')) -Force
-  Set-Content -Path $MyIniPath -Value $tuned -Force
-  Add-Content -Path $reportPath -Value "`n## Apply"
-  Add-Content -Path $reportPath -Value "- Applied changes to my.ini (admin)"
-  Add-Content -Path $reportPath -Value "- Restart MySQL80 service to take effect"
-  Write-Host "Applied changes. Restart MySQL80 service to take effect."
+  if ($Apply) {
+    Copy-Item -Path $MyIniPath -Destination ("{0}.bak-{1}" -f $MyIniPath, (Get-Date -Format 'yyyyMMdd-HHmmss')) -Force
+    Set-Content -Path $MyIniPath -Value $tuned -Force
+    Add-Content -Path $reportPath -Value "`n## Apply"
+    Add-Content -Path $reportPath -Value "- Applied changes to my.ini (admin)"
+    Add-Content -Path $reportPath -Value "- Restart MySQL80 service to take effect"
+    Write-Host "Applied changes. Restart MySQL80 service to take effect."
+  } else {
+    Add-Content -Path $reportPath -Value "`n## Apply"
+    Add-Content -Path $reportPath -Value "- Not applied (run with -Apply to write changes to my.ini)."
+    Add-Content -Path $reportPath -Value ("- Use the tuned file: {0}" -f $proposedPath)
+  }
 } else {
   Add-Content -Path $reportPath -Value "`n## Apply"
   Add-Content -Path $reportPath -Value "- Not applied (no admin rights)."
   Add-Content -Path $reportPath -Value ("- Use the tuned file: {0}" -f $proposedPath)
-  Add-Content -Path $reportPath -Value "- Run this script as Administrator to apply automatically."
+  Add-Content -Path $reportPath -Value "- Run this script as Administrator and pass -Apply to apply automatically."
 }
 
 Write-Host "Report created: $reportPath"

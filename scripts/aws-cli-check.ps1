@@ -1,6 +1,11 @@
 param(
   [Parameter()]
-  [string]$OutDir = "reports"
+  [string]$OutDir = "reports",
+
+  # If set, add AWSCLIV2 install folder to the *User* PATH.
+  # Default is safe/no-change.
+  [Parameter()]
+  [switch]$SetPath
 )
 
 Set-StrictMode -Version Latest
@@ -27,13 +32,24 @@ $awsRoot = "C:\Program Files\Amazon\AWSCLIV2"
 $awsExe = Join-Path $awsRoot "aws.exe"
 
 if (Test-Path $awsExe) {
-  $userPath = [Environment]::GetEnvironmentVariable("Path","User")
-  if ($userPath -notlike "*${awsRoot}*") {
-    $newPath = if ([string]::IsNullOrWhiteSpace($userPath)) { $awsRoot } else { "$userPath;$awsRoot" }
-    [Environment]::SetEnvironmentVariable("Path", $newPath, "User")
-    Add-Content -Path $reportPath -Value "- Added AWS CLI to user PATH"
+  $userPath = [Environment]::GetEnvironmentVariable("Path", "User")
+  $pathHasAws = ($userPath -like "*${awsRoot}*")
+  Add-Content -Path $reportPath -Value ("- Install found: {0}" -f $awsExe)
+  Add-Content -Path $reportPath -Value ("- In user PATH: {0}" -f $pathHasAws)
+
+  if ($SetPath) {
+    if (-not $pathHasAws) {
+      $newPath = if ([string]::IsNullOrWhiteSpace($userPath)) { $awsRoot } else { "$userPath;$awsRoot" }
+      [Environment]::SetEnvironmentVariable("Path", $newPath, "User")
+      Add-Content -Path $reportPath -Value "- Action: added AWS CLI install dir to user PATH"
+    } else {
+      Add-Content -Path $reportPath -Value "- Action: no change (already in user PATH)"
+    }
+  } else {
+    Add-Content -Path $reportPath -Value "- Action: no change (run with -SetPath to modify user PATH)"
   }
-  $env:Path = "$env:Path;$awsRoot"
+
+  # Use direct path so version check doesn't depend on PATH.
   $version = & $awsExe --version
   Add-Content -Path $reportPath -Value ("- Version: {0}" -f $version)
 } else {

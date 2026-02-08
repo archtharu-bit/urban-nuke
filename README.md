@@ -32,6 +32,7 @@ Reports are written to `reports\`.
 - `docs/REDHAT.md` - Red Hat Java extension setup.
 - `docs/LOCAL.md` - Local tooling checks.
 - `docs/STATUS.md` - Project status checklist and verification.
+- `docs/REMOTE-STATUS.md` - Current remote setup status.
 - `scripts/urban-nuke.ps1` - Report generator and basic security checks.
 - `reports/` - Generated reports (ignored by git).
 - `src/` - Reserved for future app code.

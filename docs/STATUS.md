@@ -14,14 +14,14 @@
 - [x] VS Code tasks and keybinding
 - [x] Dev container config
 - [x] Docker Desktop installed
-- [ ] Docker Desktop service running (requires admin start)
-- [ ] SSH host entries added (config template created)
+- [x] Docker daemon running
+- [ ] SSH host entries added (config template only)
 - [ ] VS Code tunnel enabled
 - [ ] Codespaces verified
 
 ## Validation
 - [x] Reports generated successfully
-- [ ] Docker + Dev Containers tested (Docker daemon not running)
+- [x] Docker + Dev Containers tested (daemon available)
 - [ ] Remote SSH connection tested
 - [ ] Tunnel created and verified
 - [ ] Codespace created and connected

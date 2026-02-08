@@ -10,10 +10,19 @@ This guide applies safe, general-purpose tuning for a 16 GB RAM laptop.
 - Reduce buffer pool instances to match pool size.
 
 ## Apply Automatically
+Generate a proposed tuned file (safe; does not modify `my.ini`):
+
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts\mysql-tune.ps1
 ```
-If run as Administrator, it will apply changes directly to:
+
+Apply changes (requires Administrator; writes to `my.ini` and creates a timestamped backup):
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\mysql-tune.ps1 -Apply
+```
+
+Target file:
 `C:\ProgramData\MySQL\MySQL Server 8.0\my.ini`
 
 ## Apply Manually
